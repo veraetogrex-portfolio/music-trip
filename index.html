@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Music Trip — veraetogrex_portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body{margin:0;height:100vh;background:#07080c;overflow:hidden}
+    .fit{position:absolute;left:50%;top:50%;width:1440px;height:900px}
+  </style>
+</head>
+<body>
+  <!-- Music Trip — github.com/veraetogrex-portfolio · zero dependencies
+       A whole VECTOR Music desktop screen: home, album, downloads, player.
+       Download the album and twelve waveforms fill one after another; switch Offline mode and it still plays. -->
+  <div class="fit"><section class="vm" aria-label="VECTOR Music"></section></div>
+  <script src="script.js"></script>
+  <script>
+    // the screen is 1440×900; on a smaller window it scales down to fit instead of scrolling
+    const fit = document.querySelector('.fit');
+    const scale = () => { fit.style.transform = `translate(-50%,-50%) scale(${Math.min(1, innerWidth / 1440, innerHeight / 900)})`; };
+    addEventListener('resize', scale); scale();
+  </script>
+</body>
+</html>
