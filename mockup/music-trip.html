@@ -27,7 +27,7 @@
 const app = document.querySelector('.vm').musicApp;
 const at = sel => { const r = Stage.rect(document.querySelector(sel)); return [r.cx, r.cy]; };
 const REST = [1010, 610];
-// owner 22.11: one reel of 12.4 s was "слишком быстро", split in two — ?part=1 download, ?part=2 offline
+// owner 22.11: one reel of 12.4 s was "too fast", split in two — ?part=1 download, ?part=2 offline
 const PART = new URLSearchParams(location.search).get('part') === '2' ? 2 : 1;
 const DEMO = {
   // part 1: home → album → twelve waves pour → 12 of 12
